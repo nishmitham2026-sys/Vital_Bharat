@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import Swal from 'sweetalert2';
+// import Swal from 'sweetalert2';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -16,6 +16,7 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  /*
   const handleBookDemo = () => {
     Swal.fire({
       title: 'Schedule a Vital Bharat Demo',
@@ -83,6 +84,7 @@ export default function Navbar() {
       }
     });
   };
+  */
 
   return (
     <nav className={`navbar navbar-expand-lg fixed-top vb-navbar ${scrolled ? 'scrolled' : 'py-3'}`}>
@@ -128,7 +130,7 @@ export default function Navbar() {
             <li className="nav-item mx-2">
               <a className="nav-link vb-nav-link" href="#partner">Partner With Us</a>
             </li>
-            <li className="nav-item ms-lg-3 mt-3 mt-lg-0">
+            {/* <li className="nav-item ms-lg-3 mt-3 mt-lg-0">
               <button 
                 onClick={handleBookDemo} 
                 className="btn btn-vb-primary w-100"
@@ -136,7 +138,7 @@ export default function Navbar() {
               >
                 Book a Demo
               </button>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>
