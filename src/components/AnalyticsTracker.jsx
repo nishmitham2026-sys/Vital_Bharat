@@ -42,7 +42,7 @@ const formatSecondsToHMS = (secs) => {
   return `${h}:${m}:${s}`;
 };
 
-// Send telemetry data to Google Apps Script Web App using fetch with mode: 'no-cors'
+// Send telemetry data to Google Apps Script Web App using fetch/sendBeacon
 const sendTelemetry = (location, duration, page) => {
   try {
     const rawSeconds = Number(duration || 0);
@@ -61,7 +61,20 @@ const sendTelemetry = (location, duration, page) => {
 
     console.log(`[Analytics] Sending telemetry - Location: ${location}, Duration: ${rawSeconds}s, Page: ${page}`);
 
-    fetch(`${GOOGLE_WEB_APP_URL}?${params.toString()}`, {
+    const url = `${GOOGLE_WEB_APP_URL}?${params.toString()}`;
+
+    // Use navigator.sendBeacon if available for reliable unload transmissions
+    if (typeof navigator !== 'undefined' && navigator.sendBeacon) {
+      const blob = new Blob([JSON.stringify(payload)], { type: 'application/json' });
+      const beaconSent = navigator.sendBeacon(url, blob);
+      if (beaconSent) {
+        console.log('[Analytics] Telemetry queued successfully via sendBeacon');
+        return;
+      }
+    }
+
+    // Fallback to fetch with keepalive
+    fetch(url, {
       method: 'POST',
       mode: 'no-cors',
       headers: {
