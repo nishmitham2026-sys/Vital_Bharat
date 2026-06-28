@@ -6,6 +6,8 @@ import Features from './components/Features';
 import Impact from './components/Impact';
 import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
+import AnalyticsTracker from './components/AnalyticsTracker';
+import Chatbot from './components/Chatbot';
 
 function App() {
   return (
@@ -30,6 +32,10 @@ function App() {
 
       {/* Footer */}
       <Footer />
+
+      {/* Interactive Utilities */}
+      <AnalyticsTracker />
+      <Chatbot />
     </div>
   );
 }

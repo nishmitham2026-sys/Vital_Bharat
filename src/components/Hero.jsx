@@ -38,6 +38,7 @@ export default function Hero() {
   };
 
   const handlePartnerWithUs = () => {
+    let shouldScroll = false;
     Swal.fire({
       title: 'Partner with Vital Bharat',
       text: 'Are you an NGO, CSR body, or healthcare organization? Scroll down to fill out our quick inquiry form, and we will get back to you with custom integration designs.',
@@ -46,13 +47,18 @@ export default function Hero() {
       confirmButtonText: 'Take Me to Form',
       cancelButtonText: 'Close',
       confirmButtonColor: '#0d9488',
-      cancelButtonColor: '#64748b'
+      cancelButtonColor: '#64748b',
+      didClose: () => {
+        if (shouldScroll) {
+          const contactSection = document.getElementById('partner');
+          if (contactSection) {
+            contactSection.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+      }
     }).then((result) => {
       if (result.isConfirmed) {
-        const contactSection = document.getElementById('partner');
-        if (contactSection) {
-          contactSection.scrollIntoView({ behavior: 'smooth' });
-        }
+        shouldScroll = true;
       }
     });
   };
