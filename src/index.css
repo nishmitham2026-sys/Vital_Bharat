@@ -317,7 +317,7 @@ body {
 
 /* Pulse animation for chatbot launcher */
 .pulse-glow {
-  position: relative;
+  /* Inherits fixed position from launcher button container */
 }
 .pulse-glow::after {
   content: '';
