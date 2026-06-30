@@ -16,54 +16,9 @@ export default function Impact() {
           </div>
         </div>
 
-        {/* Featured Partner Case Study: Art of Living */}
+        {/* NGO & CSR Outreach Section */}
         <div className="row align-items-center mb-5 pb-4">
           <div className="col-lg-6 mb-lg-0 mb-4">
-            <div className="bg-white p-5 rounded-4 shadow-sm border border-light vb-floating">
-              <div className="d-flex align-items-center mb-4">
-                <div className="bg-warning-subtle text-warning rounded-4 p-3 me-3 d-flex align-items-center justify-content-center" style={{ width: '60px', height: '60px' }}>
-                  <i className="bi bi-flower1 fs-3"></i>
-                </div>
-                <div>
-                  <span className="text-uppercase fw-bold text-vb-accent small" style={{ letterSpacing: '1px' }}>Flagship Partnership</span>
-                  <h4 className="fw-extrabold text-vb-primary mb-0 mt-1">The Art of Living Foundation</h4>
-                </div>
-              </div>
-              
-              <p className="text-vb-muted mb-4" style={{ lineHeight: '1.7' }}>
-                Vital Bharat has successfully powered multiple rural healthcare camps in collaboration with <strong>The Art of Living</strong>. By installing our low-bandwidth teleconsultation terminals, we enabled thousands of villagers to consult with super-specialists from top cities without leaving their villages.
-              </p>
-
-              <div className="row g-3 text-start">
-                <div className="col-sm-6">
-                  <div className="d-flex align-items-center gap-2">
-                    <i className="bi bi-check-circle-fill text-vb-accent fs-5"></i>
-                    <span className="fw-semibold text-vb-primary text-sm">30+ Remote Villages Covered</span>
-                  </div>
-                </div>
-                <div className="col-sm-6">
-                  <div className="d-flex align-items-center gap-2">
-                    <i className="bi bi-check-circle-fill text-vb-accent fs-5"></i>
-                    <span className="fw-semibold text-vb-primary text-sm">Real-time EHR Portability</span>
-                  </div>
-                </div>
-                <div className="col-sm-6">
-                  <div className="d-flex align-items-center gap-2">
-                    <i className="bi bi-check-circle-fill text-vb-accent fs-5"></i>
-                    <span className="fw-semibold text-vb-primary text-sm">5,000+ Consultations Done</span>
-                  </div>
-                </div>
-                <div className="col-sm-6">
-                  <div className="d-flex align-items-center gap-2">
-                    <i className="bi bi-check-circle-fill text-vb-accent fs-5"></i>
-                    <span className="fw-semibold text-vb-primary text-sm">94% Patient Satisfaction</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="col-lg-6 ps-lg-5">
             <span className="badge bg-vb-accent-light text-vb-accent px-3 py-2 rounded-pill fw-bold mb-3 fs-7">
               NGO & CSR Outreach
             </span>
@@ -73,7 +28,9 @@ export default function Impact() {
             <p className="text-vb-muted mb-4" style={{ lineHeight: '1.7' }}>
               Spiritual organizations, NGOs, and CSR departments possess the trust and local networks, while Vital Bharat provides the clinical framework and technological backbone. Together, we deploy scalable telemedicine clinics in weeks rather than months.
             </p>
+          </div>
 
+          <div className="col-lg-6 ps-lg-5">
             {/* Why Partner Grid */}
             <div className="row g-3">
               <div className="col-12 d-flex gap-3">

@@ -160,6 +160,17 @@ body {
   box-shadow: 0 6px 20px rgba(13, 148, 136, 0.3);
 }
 
+.btn-vb-accent:disabled {
+  background-color: var(--vb-accent) !important;
+  border-color: var(--vb-accent) !important;
+  color: var(--vb-white) !important;
+  opacity: 1 !important;
+  cursor: not-allowed !important;
+  pointer-events: none !important;
+  box-shadow: 0 4px 12px rgba(13, 148, 136, 0.2) !important;
+  transform: none !important;
+}
+
 /* Premium Card Effects (Hover-Zoom & Shadow Glide) */
 .vb-card {
   background-color: var(--vb-white);

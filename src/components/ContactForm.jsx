@@ -234,7 +234,7 @@ export default function ContactForm() {
                     <button 
                       type="submit" 
                       className="btn btn-vb-accent w-100 py-3 d-flex align-items-center justify-content-center gap-2"
-                      disabled={submitting}
+                      disabled={true}
                       id="contact-submit-btn"
                     >
                       {submitting ? (
