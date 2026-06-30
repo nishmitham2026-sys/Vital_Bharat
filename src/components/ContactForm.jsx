@@ -107,7 +107,7 @@ export default function ContactForm() {
                   <div>
                     <h6 className="fw-bold mb-1 text-light">Corporate Headquarters</h6>
                     <p className="small text-light mb-0" style={{ opacity: 0.8 }}>
-                      Nagarbhavi,Bengaluru
+                      Nagarbhavi, Bengaluru
                     </p>
                   </div>
                 </div>
